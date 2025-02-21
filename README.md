@@ -1,39 +1,45 @@
-# -Public-Announcement-Board
-# Public Announcement Board - On-Chain dApp
+# social_media_interaction_tracker
+# 📊 Social Media Engagement Tracker
 
-This project is a simple decentralized application (dApp) built on the Ethereum blockchain using Solidity. The purpose of this application is to provide a public announcement board where users can post and view public messages securely and immutably on-chain.
+A simple Solidity smart contract that tracks social media engagement (likes, comments, shares) and rewards users based on their activity. This contract is deployed on Edu Chain.
 
-## Features
+## 🌟 Features
 
-- **Post Public Announcements:** Users can post text messages (announcements) on the blockchain.
-- **Immutable Records:** All posted messages are stored on-chain, making them publicly accessible and tamper-proof.
-- **View Announcements:** Users can view all announcements made on the board with the option to retrieve individual posts by index.
-- **No Input on Deployment:** The contract does not require any input during deployment, making it easy to deploy and use.
-- **Transparent and Decentralized:** As a blockchain-based application, all announcements are publicly visible to everyone, ensuring transparency.
+✅ Track Engagement: Store user interactions (likes, comments, shares).  
+✅ Claim Rewards: Users receive rewards when engagement points reach a threshold.  
+✅ Transparent & Secure: Uses blockchain for verifiable engagement tracking.  
+✅ No Constructor Needed: No input required during deployment.  
+✅ View Functions: Check engagement scores and rewards anytime.
 
-## How It Works
+## 🔗 Deployed Smart Contract
 
-1. **Post a Message:** Any user can call the `postAnnouncement(string memory message)` function to post a message on the board. This function stores the message, the address of the sender, and the timestamp of when it was posted.
-2. **View Announcements:** Users can use the `getAnnouncementsCount()` function to retrieve the total number of posted messages and `getAnnouncement(uint256 index)` to view a specific announcement by its index in the list.
-3. **Event Logging:** When a new message is posted, a `NewAnnouncement` event is emitted, containing the sender's address, message, and timestamp.
+- Network: Edu Chain  
+- Contract Address: 0xE6959a4531145d52B04d40cf7B621768cDF024D3
 
-## Contract Address
+## 🚀 How It Works
 
-The contract has been successfully deployed to the [EduChain](https://edu-chain.example) network. You can interact with the contract at the following address:
+1. Update Engagement:  
+   - Admin updates user engagement scores via updateEngagement(address user, uint256 score).  
 
-**Deployed Contract Address:**
+2. Check Scores & Rewards:  
+   - getEngagement(address user) → View engagement points.  
+   - getRewards(address user) → View total earned rewards.  
 
-Feel free to interact with the contract and post your announcements. You can view and interact with this contract via Remix IDE, or integrate it into a front-end dApp.
+3. Claim Rewards:  
+   - Users with 100+ points can claim rewards using claimReward().  
+   - Engagement resets after claiming.
 
-## Functions
+## 🛠 Future Improvements
 
-- **`postAnnouncement(string memory message)`** - Allows users to post a new announcement. The message is saved on-chain.
-- **`getAnnouncementsCount()`** - Returns the total number of announcements posted.
-- **`getAnnouncement(uint256 index)`** - Retrieves a specific announcement by index. Returns the poster's address, message, and timestamp.
+- 🔗 Automated Social Media API Integration  
+- 💰 Reward System with ERC-20 Tokens  
+- 🛡 Admin Role for Secure Updates  
+- 🎯 Leaderboard for Top Engagers  
 
-## Deployment
+## 📜 License
 
-1. Clone this repository:
+This project is open-source under the MIT License.
 
-   ```bash
-   git clone https://github.com/your-username/public-announcement-board.git
+---
+
+🔗 Follow for more updates! 🚀
